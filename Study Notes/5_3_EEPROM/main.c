@@ -12,7 +12,6 @@ unsigned char My_EEPROM_Read(unsigned int ucAdderss);
 
 int main(void)
 {
-    /* Replace with your application code */
 	unsigned char ucBaseAdderss = 0x00;
 	unsigned int  uiBaseAdderss = 0x0000;
 	unsigned char ucBaseData = 0x00;
@@ -47,29 +46,29 @@ int main(void)
 
 void My_EEPROM_Write(unsigned char ucAdderss, unsigned char ucData)
 {
-	//等待上一个写操作完成//
+	//Wait last write//
 	while(EECR & (1<<EEPE));
-	//设置工作模式//
+	//Set write mode//
 	EECR = (0<<EEPM1)|(0<<EEPM0);
-	//设置目标地址和目标数据//
+	//Set address and data//
 	EEARL = ucAdderss;
 	EEDR = ucData;
-	//EEMPE写1，使EEPE写1有效//
+	//Enable EEPE//
 	EECR = EECR | (1<<EEMPE);
-	//EEPE写1，开始写EEPROM//
+	//Perform write operation//
 	EECR = EECR | (1<<EEPE);
 }
 
 unsigned char My_EEPROM_Read(unsigned int ucAdderss)
 {
-	//等待上一个写操作完成//
+	//Wait last write//
 	while(EECR & (1<<EEPE));
-	//设置工作模式//
+	//Set write mode//
 	EECR = (0<<EEPM1)|(0<<EEPM0);
-	//设置目标地址//
+	//脡set address//
 	EEAR = ucAdderss;
-	//EERE写1，开始读EEPROM//
+	//Enable EEPE//
 	EECR = EECR | (1<<EERE);
-	//从数据寄存器返回读到的数据//
+	//Perform read operation//
 	return EEDR;
 }
