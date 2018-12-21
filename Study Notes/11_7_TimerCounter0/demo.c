@@ -10,7 +10,16 @@
 
 int main(void)
 {
-	//My_TimerCounter0_Normal_Toggle();
+	/* Waveform Generation Mode:Normal;
+    * Compare Output Mode:COM0B,Toggle;
+    * Clock Select:clk(io),No prescaling;
+    */
+	My_TimerCounter0_Normal_Toggle();
+	
+	/* Waveform Generation Mode:CTC;
+    * Compare Output Mode:COM0A,Toggle;
+    * Clock Select:clk(io),No prescaling;
+    */
 	My_TimerCounter0_CTC_Toggle();
     while (1) {}
 }
