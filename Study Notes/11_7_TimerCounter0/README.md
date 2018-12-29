@@ -16,9 +16,12 @@
 
   【11.6.1】**COM0[1:0]**改变后，相应设置将在下一次比较匹配时生效，也可以通过**强制比较匹配使之立即生效**。
 
-  【11.7】定时器/计数器及其输出引脚的行为，由波形发生模式寄存器<sub>Waveform Generator mode</sub><sup>WGM0[2:0]</sup>、比较输出模式寄存器<sub>Compare Output Mode</sub><sup>COM0x[1:0]</sup>共同决定。
+  【11.7】定时器/计数器及其输出引脚的行为，由波形发生模式寄存器<sub>Waveform Generator mode</sub><sup>WGM0[2:0]</sup>、比较输出模式寄存器<sub>Compare Output Mode</sub><sup>COM0x[1:0]</sup>共同决定。比较输出模式寄存器<sub>Compare Output Mode</sub><sup>COM0x[1:0]</sup>在PWM模式中决定波形是否反转，在非PWM模式中，决定比较匹配时的输出动作，包括置位、清除和反转。
 
-- 比较输出模式寄存器<sub>Compare Output Mode</sub><sup>COM0x[1:0]</sup>在PWM模式中决定波形是否反转，在非PWM模式中，决定比较匹配时的输出动作，包括置位、清除和反转。
+  【11.7.2】Clear Timer on Compare Match (CTC) Mode:该模式下可产生PWM波(通过设置输出模式<sub>Compare Output Mode</sub>为Toggle实现，即COM0A[1:0]=1)。最大PWM波形频率为I/O频率的一半（通过设置OCR0A=0x00实现）。有频率计算公式：
+  $$
+  f_{OCnx}=\frac{f_{clk\_{I/O}}}{2*N*(1+OCRnx)}\quad(N代表预分频因子)
+  $$
 
 - 以下是一些可用的配置实例。
 
