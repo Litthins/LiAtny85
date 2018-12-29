@@ -1,7 +1,3 @@
-<script type="text/javascript"
-        src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default">
-</script>
-
 # TimerCounter0 with PWM
 
 - **注意，Timer/Counter0的OCR0A与OCR0B功能上有所不同，对应引脚不同，配置时需要查表，认真区分。**
@@ -23,10 +19,7 @@
   【11.7】定时器/计数器及其输出引脚的行为，由波形发生模式寄存器<sub>Waveform Generator mode</sub><sup>WGM0[2:0]</sup>、比较输出模式寄存器<sub>Compare Output Mode</sub><sup>COM0x[1:0]</sup>共同决定。比较输出模式寄存器<sub>Compare Output Mode</sub><sup>COM0x[1:0]</sup>在PWM模式中决定波形是否反转，在非PWM模式中，决定比较匹配时的输出动作，包括置位、清除和反转。
 
   【11.7.2】Clear Timer on Compare Match (CTC) Mode:该模式下可产生PWM波(通过设置输出模式<sub>Compare Output Mode</sub>为Toggle实现，即COM0A[1:0]=1)。最大PWM波形频率为I/O频率的一半（通过设置OCR0A=0x00实现）。有频率计算公式：
-  $$
-  f_{OCnx}=\frac{f_{clk\_{I/O}}}{2*N*(1+OCRnx)}\quad(N代表预分频因子)
-  $$
-
+<a href="https://www.codecogs.com/eqnedit.php?latex=f_{OCnx}=\frac{f_{clk\_{I/O}}}{2*N*(1&plus;OCRnx)}\quad(N\&space;variable\&space;represents\&space;the\&space;prescale\&space;factor)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f_{OCnx}=\frac{f_{clk\_{I/O}}}{2*N*(1&plus;OCRnx)}\quad(N\&space;variable\&space;represents\&space;the\&space;prescale\&space;factor)" title="f_{OCnx}=\frac{f_{clk\_{I/O}}}{2*N*(1+OCRnx)}\quad(N\ variable\ represents\ the\ prescale\ factor)" /></a>
 - 以下是一些可用的配置实例。
 
 - ## void My_TimerCounter0_Normal_Toggle();
