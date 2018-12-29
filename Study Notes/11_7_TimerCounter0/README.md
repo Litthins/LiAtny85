@@ -16,7 +16,7 @@
 
   【11.6.1】**COM0[1:0]**改变后，相应设置将在下一次比较匹配时生效，也可以通过**强制比较匹配使之立即生效**。
 
-  【11.7】定时器/计数器及其输出引脚的行为，由**波形发生模式寄存器<sub>Waveform Generator mode</sub><sup>WGM0[2:0]</sup>**和**比较输出模式寄存器<sub>Compare Output Mode</sub><sup>COM0x[1:0]</sup>**共同决定。
+  【11.7】定时器/计数器及其输出引脚的行为，由**波形发生模式寄存器<sub>Waveform Generator mode</sub><sup>WGM0[2:0]</sup>、比较输出模式寄存器<sub>Compare Output Mode</sub><sup>COM0x[1:0]</sup>**共同决定。
 
 - **比较输出模式寄存器<sub>Compare Output Mode</sub><sup>COM0x[1:0]</sup>**在PWM模式中决定波形是否反转，在非PWM模式中，决定比较匹配时的输出动作，包括置位、清除和反转。
 
