@@ -21,6 +21,8 @@
   【11.7.2】Clear Timer on Compare Match (CTC) Mode:该模式下可产生PWM波(通过设置输出模式<sub>Compare Output Mode</sub>为Toggle实现，即COM0A[1:0]=1)。**最大PWM波形频率为I/O频率的一半**（通过设置OCR0A=0x00实现）。有频率计算公式：
   <a href="https://www.codecogs.com/eqnedit.php?latex=f_{OCnx}=\frac{f_{clk\_{I/O}}}{2*N*(1&plus;OCRnx)}\quad(N\&space;variable\&space;represents\&space;the\&space;prescale\&space;factor)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?f_{OCnx}=\frac{f_{clk\_{I/O}}}{2*N*(1&plus;OCRnx)}\quad(N\&space;variable\&space;represents\&space;the\&space;prescale\&space;factor)" title="f_{OCnx}=\frac{f_{clk\_{I/O}}}{2*N*(1+OCRnx)}\quad(N\ variable\ represents\ the\ prescale\ factor)" /></a>
 
+  **该模式下有溢出中断TOV0和比较匹配中断OCF0A可用。比较匹配中断OCF0A由计数器值达到TOP而产生，TOP由OCR0A决定。**
+
   【11.7.3】Fast PWM Mode:该模式下，定时器/计数器的TOP由WGM0[2:0]决定，WGM0[2:0]=3，则TOP=0xFF，WGM0[2:0]=7，则TOP=OCR0A。因为Fast PWM Mode使用单斜坡操作，而Phase Correct PWM使用双斜坡操作，所以**Fast PWM Mode的频率最高可达Phase Correct PWM的两倍**。**该模式下溢出中断，即TOV0置位由TOP的值确定**。
 
 - 以下是一些可用的配置实例。
