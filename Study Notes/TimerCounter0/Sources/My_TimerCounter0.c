@@ -1,12 +1,12 @@
 /*
- * My_11_7_TimerCounter0.c
+ * My_TimerCounter0.c
  *
  * Created: 2018/12/21 10:43:53
  *  Author: Litthins
  */ 
 
 #include <avr/io.h>
-#include "../Headers/My_11_7_TimerCounter0.h"
+#include "../Headers/My_TimerCounter0.h"
 
 /* Waveform Generation Mode:Normal;
  * Compare Output Mode:COM0B,Toggle;

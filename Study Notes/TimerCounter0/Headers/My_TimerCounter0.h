@@ -1,13 +1,13 @@
 /*
- * My_11_7_TimerCounter0.h
+ * My_TimerCounter0.h
  *
  * Created: 2018/12/21 10:43:38
  *  Author: Litthins
  */ 
 
 
-#ifndef MY_11_7_TIMERCOUNTER0_H_
-#define MY_11_7_TIMERCOUNTER0_H_
+#ifndef MY_TIMERCOUNTER0_H_
+#define MY_TIMERCOUNTER0_H_
 
 /* Waveform Generation Mode:Normal;
  * Compare Output Mode:COM0B,Toggle;
@@ -21,4 +21,4 @@ void My_TimerCounter0_Normal_Toggle();
  */
 void My_TimerCounter0_CTC_Toggle();
 
-#endif /* MY_11_7_TIMERCOUNTER0_H_ */
+#endif /* MY_TIMERCOUNTER0_H_ */
