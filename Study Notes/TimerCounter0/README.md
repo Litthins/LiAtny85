@@ -30,15 +30,15 @@
 - ## void My_TimerCounter0_Normal_Toggle();
 
 ```c
-//Waveform Generation Mode:Normal;
-//Compare Output Mode:COM0B,Toggle;
-//Clock Select:clk(io),No prescaling.
+//Waveform Generation Mode:Normal;波形产生模式：普通。
+//Compare Output Mode:COM0B,Toggle;比较输出模式：COM0B，反转模式。
+//Clock Select:clk(io),No prescaling;时钟选择：无预分频。
 ```
 
 - ## void My_TimerCounter0_CTC_Toggle();
 
 ```c
-//Waveform Generation Mode:CTC;
-//Compare Output Mode:COM0A,Toggle;
-//Clock Select:clk(io),No prescaling.
+//Waveform Generation Mode:CTC;波形产生模式：比较匹配时清空定时器。
+//Compare Output Mode:COM0A,Toggle;比较输出模式：COM0A，反转模式。
+//Clock Select:clk(io),No prescaling;时钟选择：无预分频。
 ```
