@@ -21,5 +21,6 @@ int main(void)
     * Clock Select:clk(io),No prescaling;
     */
 	My_TimerCounter0_CTC_Toggle();
+	
     while (1) {}
 }
