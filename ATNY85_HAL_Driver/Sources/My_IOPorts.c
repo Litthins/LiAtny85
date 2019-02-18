@@ -8,10 +8,10 @@
 #include <avr/io.h>
 #include "../Headers/My_IOPorts.h"
 
-//PORTB5Ä¬ÈÏÎªRESETÒı½Å£¬ÉÏµçºóÎª¸ßµçÆ½£¬¿ÉÍ¨¹ıÉèÖÃÈÛË¿¸ü¸ÄÄ¬ÈÏÉèÖÃ£¬µ«»áÓ°ÏìUSBASPÏÂÔØ¹¦ÄÜ¡£
-//ÒÔÏÂÄ¬ÈÏ²»¶ÔPORTB5×öÈÎºÎ²Ù×÷¡£
+//PORTB5é»˜è®¤ä¸ºRESETå¼•è„šï¼Œä¸Šç”µåä¸ºé«˜ç”µå¹³ï¼Œå¯é€šè¿‡è®¾ç½®ç†”ä¸æ›´æ”¹é»˜è®¤è®¾ç½®ï¼Œä½†ä¼šå½±å“USBASPä¸‹è½½åŠŸèƒ½ã€‚
+//ä»¥ä¸‹é»˜è®¤ä¸å¯¹PORTB5åšä»»ä½•æ“ä½œã€‚
 
-/*Outputº¯Êı£ºMy_IOPorts_Output_Set_High()
+/*Outputå‡½æ•°ï¼šMy_IOPorts_Output_Set_High()
  *Set PORTB PINs Output High
  */
 void My_IOPorts_Output_Set_High()
@@ -20,7 +20,7 @@ void My_IOPorts_Output_Set_High()
 	DDRB=(1<<DDB0)|(1<<DDB1)|(1<<DDB2)|(1<<DDB3)|(1<<DDB4);
 }
 
-/*Outputº¯Êı£ºMy_IOPorts_Output_Set_Low()
+/*Outputå‡½æ•°ï¼šMy_IOPorts_Output_Set_Low()
  *Set PORTB PINs Output Low
  */
 void My_IOPorts_Output_Set_Low()
@@ -29,16 +29,16 @@ void My_IOPorts_Output_Set_Low()
 	DDRB=(1<<DDB0)|(1<<DDB1)|(1<<DDB2)|(1<<DDB3)|(1<<DDB4);
 }
 
-/*Inputº¯Êı£ºMy_IOPorts_Read_Input()
+/*Inputå‡½æ•°ï¼šMy_IOPorts_Read_Input()
  *Read PORTB PINs
  */
 unsigned char My_IOPorts_Read_Input()
 {
 	unsigned char read_all_pins;
-	//MCUCR=1<<PUD;//Pull-up Disable,ÉÏÀ­¿ÉÑ¡Ïî
+	//MCUCR=1<<PUD;//Pull-up Disable,???????
 	PORTB=(0<<PB0)|(0<<PB1)|(0<<PB2)|(0<<PB3)|(0<<PB4);
 	DDRB=(0<<DDB0)|(0<<DDB1)|(0<<DDB2)|(0<<DDB3)|(0<<DDB4);
-	asm ("NOP");//¸ù¾İDatasheetÒªÇó£¬¶ÁÈ¡PINsĞèÒª·ÅÖÃÒ»¸ö_NOP();
-	read_all_pins=PINB&((1<<PINB0)|(1<<PINB1)|(1<<PINB2)|(1<<PINB3)|(1<<PINB4));//PINB0-PINB4Îª¿ÉÓÃµÄºê¶¨Òå³£Á¿
+	asm ("NOP");//????atasheetÒª?????È¡PINs?Òª??????_NOP();
+	read_all_pins=PINB&((1<<PINB0)|(1<<PINB1)|(1<<PINB2)|(1<<PINB3)|(1<<PINB4));//PINB0-PINB4Îª??ÃµÄºê¶¨?????
 	return read_all_pins;
 }
