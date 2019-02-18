@@ -9,17 +9,17 @@
 #ifndef MY_IOPORTS_H_
 #define MY_IOPORTS_H_
 
-/*Outputº¯Êý£ºMy_IOPorts_Output_Set_High()
+/*Outputå‡½æ•°ï¼šMy_IOPorts_Output_Set_High()
  *Set PORTB0 Output High
  */
 void My_IOPorts_Output_Set_High();
 
-/*Outputº¯Êý£ºMy_IOPorts_Output_Set_Low()
+/*Outputå‡½æ•°ï¼šMy_IOPorts_Output_Set_Low()
  *Set PORTB0 Output Low
  */
 void My_IOPorts_Output_Set_Low();
 
-/*Inputº¯Êý£ºMy_IOPorts_Read_Input()
+/*Inputå‡½æ•°ï¼šMy_IOPorts_Read_Input()
  *Read PORTB PINs
  */
 unsigned char My_IOPorts_Read_Input();

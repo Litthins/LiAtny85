@@ -35,10 +35,10 @@ void My_IOPorts_Output_Set_Low()
 unsigned char My_IOPorts_Read_Input()
 {
 	unsigned char read_all_pins;
-	//MCUCR=1<<PUD;//Pull-up Disable,???????
+	//MCUCR=1<<PUD;//Pull-up Disable,上拉可选项
 	PORTB=(0<<PB0)|(0<<PB1)|(0<<PB2)|(0<<PB3)|(0<<PB4);
 	DDRB=(0<<DDB0)|(0<<DDB1)|(0<<DDB2)|(0<<DDB3)|(0<<DDB4);
-	asm ("NOP");//????atasheetҪ?????ȡPINs?Ҫ??????_NOP();
-	read_all_pins=PINB&((1<<PINB0)|(1<<PINB1)|(1<<PINB2)|(1<<PINB3)|(1<<PINB4));//PINB0-PINB4Ϊ??õĺ궨?????
+	asm ("NOP");//根据Datasheet要求，读取PINs需要放置一个_NOP();
+	read_all_pins=PINB&((1<<PINB0)|(1<<PINB1)|(1<<PINB2)|(1<<PINB3)|(1<<PINB4));//PINB0-PINB4为可用的宏定义常量
 	return read_all_pins;
 }
