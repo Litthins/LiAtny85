@@ -10,7 +10,6 @@
 
 int main(void)
 {
-    /* Replace with your application code */
 	unsigned char ucBaseAdderss = 0x00;
 	unsigned int  uiBaseAdderss = 0x0000;
 	unsigned char ucBaseData = 0x00;
