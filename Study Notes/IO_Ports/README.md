@@ -4,12 +4,12 @@
 
 - **Port Pin Configurations:**
 
-| DDxn | PORTxn | PUD(in MCUCR) |  I/O  | Pull-up |     Comment     |
-| :--: | :----: | :-----------: |  :--: | :-----: |     :-----:     |
-|   0  |    0   |       X       | Input |    No   | Tri-state(Hi-Z) |
-|   0  |    1   |       0       | Input |    Yes  | Pxn will source current if ext. pulled low. |
-|   0  |    1   |       1       | Input |    No   | Tri-state(Hi-Z) |
-|   1  |    0   |       X       | Output|    No   | Output Low(Sink)|
-|   1  |    1   |       X       | Output|    No   | Output High(Source) |
+| DDxn | PORTxn | PUD(in MCUCR) |  I/O   | Pull-up |                   Comment                   |
+| :--: | :----: | :-----------: | :----: | :-----: | :-----------------------------------------: |
+|  0   |   0    |       X       | Input  |   No    |               Tri-state(Hi-Z)               |
+|  0   |   1    |       0       | Input  |   Yes   | Pxn will source current if ext. pulled low. |
+|  0   |   1    |       1       | Input  |   No    |               Tri-state(Hi-Z)               |
+|  1   |   0    |       X       | Output |   No    |              Output Low(Sink)               |
+|  1   |   1    |       X       | Output |   No    |             Output High(Source)             |
 
 
