@@ -21,4 +21,8 @@ void My_TimerCounter0_Normal_Toggle();
  */
 void My_TimerCounter0_CTC_Toggle();
 
+/* Waveform Generation Mode:FastPWM;
+ */
+void My_TimerCounter0_FastPWM();
+
 #endif /* MY_TIMERCOUNTER0_H_ */

@@ -47,3 +47,10 @@ void My_TimerCounter0_CTC_Toggle()
 	
 	GTCCR=(0<<TSM);
 }
+
+/* Waveform Generation Mode:FastPWM;
+ */
+void My_TimerCounter0_FastPWM()
+{
+	
+}
