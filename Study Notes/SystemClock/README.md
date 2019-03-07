@@ -52,6 +52,9 @@
 
 # 系统时钟设置示例
 
-- **1MHz(8MHz,with CKDIV8=0):**
+|            1MHz(8MHz,with CKDIV8=0)            |             8MHz(8MHz,with CKDIV8=1)             |
+| :--------------------------------------------: | :----------------------------------------------: |
+|           ![](./Images/F0000TEK.BMP)           |            ![](./Images/F0001TEK.BMP)            |
+| **2MHz(8MHz,with CKDIV8=1,Division Factor=4)** | **1MHz(8MHz,with CKDIV8=1,Division Factor=256)** |
+|           ![](./Images/F0002TEK.BMP)           |            ![](./Images/F0003TEK.BMP)            |
 
-  ![](./Images/F0000TEK.BMP)
