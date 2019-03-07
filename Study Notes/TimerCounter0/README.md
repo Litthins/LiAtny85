@@ -27,7 +27,7 @@
 
 - 以下是一些可用的配置实例。
 
-- ## void My_TimerCounter0_Normal_Toggle();
+- ## void TimerCounter0_Normal_Toggle();
 
 ```c
 //Waveform Generation Mode:Normal;波形产生模式：普通。
@@ -35,7 +35,7 @@
 //Clock Select:clk(io),No prescaling;时钟选择：无预分频。
 ```
 
-- ## void My_TimerCounter0_CTC_Toggle();
+- ## void TimerCounter0_CTC_Toggle();
 
 ```c
 //Waveform Generation Mode:CTC;波形产生模式：比较匹配时清空定时器。

@@ -6,7 +6,7 @@
  */ 
 
 #include <avr/io.h>
-#include "Headers/My_EEPROM.h"
+#include "Headers/EEPROM.h"
 
 int main(void)
 {

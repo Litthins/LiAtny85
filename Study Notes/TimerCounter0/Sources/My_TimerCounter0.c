@@ -1,18 +1,18 @@
 /*
- * My_TimerCounter0.c
+ * TimerCounter0.c
  *
  * Created: 2018/12/21 10:43:53
  *  Author: Litthins
  */ 
 
 #include <avr/io.h>
-#include "../Headers/My_TimerCounter0.h"
+#include "../Headers/TimerCounter0.h"
 
 /* Waveform Generation Mode:Normal;
  * Compare Output Mode:COM0B,Toggle;
  * Clock Select:clk(io),No prescaling;
  */
-void My_TimerCounter0_Normal_Toggle()
+void TimerCounter0_Normal_Toggle()
 {
 	PORTB=(1<<PB1);
 	DDRB=(1<<DDB1);
@@ -32,7 +32,7 @@ void My_TimerCounter0_Normal_Toggle()
  * Compare Output Mode:COM0A,Toggle;
  * Clock Select:clk(io),No prescaling;
  */
-void My_TimerCounter0_CTC_Toggle()
+void TimerCounter0_CTC_Toggle()
 {
 	PORTB=(1<<PB0);
 	DDRB=(1<<DDB0);
@@ -50,7 +50,7 @@ void My_TimerCounter0_CTC_Toggle()
 
 /* Waveform Generation Mode:FastPWM;
  */
-void My_TimerCounter0_FastPWM()
+void TimerCounter0_FastPWM()
 {
 	
 }

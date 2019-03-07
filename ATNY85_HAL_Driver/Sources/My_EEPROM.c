@@ -1,14 +1,14 @@
 /*
- * My_EEPROM.c
+ * EEPROM.c
  *
  * Created: 2018/12/20 18:17:11
  *  Author: Litthins
  */ 
 
 #include <avr/io.h>
-#include "../Headers/My_EEPROM.h"
+#include "../Headers/EEPROM.h"
 
-void My_EEPROM_Write(unsigned char ucAdderss, unsigned char ucData)
+void EEPROM_Write(unsigned char ucAdderss, unsigned char ucData)
 {
 	//Wait last write//
 	while(EECR & (1<<EEPE));
@@ -23,7 +23,7 @@ void My_EEPROM_Write(unsigned char ucAdderss, unsigned char ucData)
 	EECR = EECR | (1<<EEPE);
 }
 
-unsigned char My_EEPROM_Read(unsigned int ucAdderss)
+unsigned char EEPROM_Read(unsigned int ucAdderss)
 {
 	//Wait last write//
 	while(EECR & (1<<EEPE));
