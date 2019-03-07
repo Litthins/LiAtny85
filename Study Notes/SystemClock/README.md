@@ -45,7 +45,13 @@
   - 第二步，同时写需要的CLKPSn，写CLKPCE(Clock Prescaler Enable)=0。
 
 - **操作预分频器时，需要确保中断被禁止，以保证操作成功。**
+
 - 熔丝位CKDIV8默认为编程状态(Programmed=0)，此项设置将使得CLKPS=0011，即8分频。可以在软件中重新设置CLKPS而不受CKDIV8熔丝位的影响。
 
+------
 
+# 系统时钟设置示例
 
+- **1MHz(8MHz,with CKDIV8=0):**
+
+  ![](./IMAGES/F0000TEK.BMP)
