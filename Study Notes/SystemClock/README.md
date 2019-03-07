@@ -54,4 +54,4 @@
 
 - **1MHz(8MHz,with CKDIV8=0):**
 
-  ![](./IMAGES/F0000TEK.BMP)
+  ![](./Images/F0000TEK.BMP)
