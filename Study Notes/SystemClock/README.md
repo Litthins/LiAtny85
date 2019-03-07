@@ -1,6 +1,6 @@
 # System Clock 系统时钟
 
-- **Clock Output Buffer：**输出系统时钟（若分频，则输出分频后的时钟）到CLKO Pin，熔丝实现。在输出系统时钟到CLOK Pin时，对该Pin的普通操作及IO Pin操作会失效。
+- **Clock Output Buffer：** 输出系统时钟（若分频，则输出分频后的时钟）到CLKO Pin，熔丝实现。在输出系统时钟到CLOK Pin时，对该Pin的普通操作及IO Pin操作会失效。
 
 - PLLE位：PLLE位在PLLCSR寄存器里，在使能锁相环PLL时需要置1。
 
