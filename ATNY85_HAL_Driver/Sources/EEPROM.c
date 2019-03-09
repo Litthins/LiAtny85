@@ -8,6 +8,8 @@
 #include <avr/io.h>
 #include "../Headers/EEPROM.h"
 
+/*EEPROM写函数：EEPROM_Write(unsigned char ucAdderss, unsigned char ucData)
+ */
 void EEPROM_Write(unsigned char ucAdderss, unsigned char ucData)
 {
 	//Wait last write//
@@ -23,6 +25,8 @@ void EEPROM_Write(unsigned char ucAdderss, unsigned char ucData)
 	EECR = EECR | (1<<EEPE);
 }
 
+/*EEPROM读函数：EEPROM_Read(unsigned int ucAdderss)
+ */
 unsigned char EEPROM_Read(unsigned int ucAdderss)
 {
 	//Wait last write//

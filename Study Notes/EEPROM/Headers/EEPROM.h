@@ -9,8 +9,12 @@
 #ifndef EEPROM_H_
 #define EEPROM_H_
 
-
+/*EEPROM写函数：EEPROM_Write(unsigned char ucAdderss, unsigned char ucData)
+ */
 void EEPROM_Write(unsigned char ucAdderss, unsigned char ucData);
+
+/*EEPROM读函数：EEPROM_Read(unsigned int ucAdderss)
+ */
 unsigned char EEPROM_Read(unsigned int ucAdderss);
 
 
