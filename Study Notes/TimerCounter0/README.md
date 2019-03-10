@@ -25,7 +25,9 @@
 
   【11.7.3】Fast PWM Mode:该模式下，定时器/计数器的TOP由WGM0[2:0]决定，WGM0[2:0]=3，则TOP=0xFF，WGM0[2:0]=7，则TOP=OCR0A。因为Fast PWM Mode使用单斜坡操作，而Phase Correct PWM使用双斜坡操作，所以**Fast PWM Mode的频率最高可达Phase Correct PWM的两倍**。**该模式下溢出中断，即TOV0置位由TOP的值确定**。
 
-- 以下是一些可用的配置实例。
+------
+
+# 以下是一些可用的配置实例
 
 - ## void TimerCounter0_Normal_Toggle();
 
@@ -35,6 +37,10 @@
 //Clock Select:clk(io),No prescaling;时钟选择：无预分频。
 ```
 
+|   CLK<sub>sys</sub>=8MHz   | CLK<sub>io</sub>=15.69KHz  |
+| :------------------------: | :------------------------: |
+| ![](./Images/F0008TEK.BMP) | ![](./Images/F0007TEK.BMP) |
+
 - ## void TimerCounter0_CTC_Toggle();
 
 ```c
@@ -42,3 +48,8 @@
 //Compare Output Mode:COM0A,Toggle;比较输出模式：COM0A，反转模式。
 //Clock Select:clk(io),No prescaling;时钟选择：无预分频。
 ```
+
+|   CLK<sub>sys</sub>=8MHz   | CLK<sub>io</sub>=8MHz/(2x1x(1+1))=2MHz |
+| :------------------------: | :------------------------------------: |
+| ![](./Images/F0004TEK.BMP) |       ![](./Images/F0005TEK.BMP)       |
+
