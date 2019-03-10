@@ -20,8 +20,6 @@ void TimerCounter0_Normal_Toggle()
 	GTCCR=(1<<TSM);
 	GTCCR=(1<<PSR0);
 	
-	OCR0B=0XDD;
-	
 	TCCR0A=(0<<COM0A1)|(0<<COM0A0)|(0<<COM0B1)|(1<<COM0B0)|(0<<WGM01)|(0<<WGM00);
 	TCCR0B=(0<<WGM02)|(0<<CS02)|(0<<CS01)|(1<<CS00);
 	
