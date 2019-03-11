@@ -14,13 +14,13 @@ int main(void)
     * Compare Output Mode:COM0B,Toggle;
     * Clock Select:clk(io),No prescaling;
     */
-	TimerCounter0_Normal_Toggle();
+	TimerCounter0_Normal_Toggle(0XDD);
 	
 	/* Waveform Generation Mode:CTC;
     * Compare Output Mode:COM0A,Toggle;
     * Clock Select:clk(io),No prescaling;
     */
-	TimerCounter0_CTC_Toggle();
+	TimerCounter0_CTC_Toggle(0X00);
 	
     while (1) {}
 }
