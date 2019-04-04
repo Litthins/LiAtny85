@@ -5,7 +5,7 @@
  *  Author: Litthins
  */ 
 
-#include <avr/io.h>
+#include "../Headers/BASE_REG.h"
 #include "../Headers/IOPorts.h"
 
 //PORTB5默认为RESET引脚，上电后为高电平，可通过设置熔丝更改默认设置，但会影响USBASP下载功能。

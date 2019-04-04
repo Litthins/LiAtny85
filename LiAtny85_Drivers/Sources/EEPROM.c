@@ -5,7 +5,7 @@
  *  Author: Litthins
  */ 
 
-#include <avr/io.h>
+#include "../Headers/BASE_REG.h"
 #include "../Headers/EEPROM.h"
 
 /*EEPROM写函数：EEPROM_Write(unsigned char ucAdderss, unsigned char ucData)
